@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Chuck from './people/Chuck';
 import Kanye from './people/Kanye';
 import Ron from './people/Ron';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Redirect } from 'react-router-dom';
 import { customFetch } from '../utility/fetch';
 
 const App = () => {
@@ -42,7 +42,7 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Route
         path={'/chuck'}
         component={() => (
@@ -62,7 +62,7 @@ const App = () => {
         )}
       />
       <Redirect to={'/chuck'} />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
